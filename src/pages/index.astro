@@ -1,0 +1,182 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro";
+import TextMarquee from "../components/TextMarquee.astro";
+import GalleryText from "../components/GalleryText.astro";
+import Faqs from "../components/Faqs.astro";
+import StepsTimeline from "../components/StepsTimeline.astro";
+import Plans from "../components/Plans.astro";
+import Statements from "../components/Statements.astro";
+import Introducing from "../components/Introducing.astro";
+import GL from "../components/GL.astro";
+import GLPlaces from "../components/GlPlaces.astro";
+import Projects from "../components/Projects.astro";
+
+
+---
+
+<Layout title="Inicio">
+  <HeroHome
+    title="CoreTekSoft Labs. Aprende y Construye."
+    subtitle="CoreTekSoft Labs es la iniciativa educativa de CoreTekSoft, un espacio donde compartimos proyectos de código abierto (open source) para que estudiantes y desarrolladores exploren cómo se construyeron diversas soluciones durante nuestra etapa universitaria."
+    cta={{
+      title: "Coreteksoft Labs",
+      url: "#",
+    }}
+  />
+
+  <section id="nosotros">
+  <Introducing
+    title="Una plataforma de aprendizaje para construir el futuro"
+    text="Desde el primer commit hasta el despliegue final, documentamos cada etapa de nuestros proyectos para que puedas aprender, replicar e innovar. Con IA como aliada, el aprendizaje se acelera y las posibilidades son ilimitadas."
+    cta={{
+      title: "Coreteksoft Labs",
+      url: "#",
+    }}
+  />
+
+  <StepsTimeline
+    title="Cómo funciona"
+    items={[
+      {
+        title: "Explora proyectos reales",
+        text: "Accede al código fuente de herramientas desarrolladas por CoreTekSoft, con documentación detallada sobre cada decisión técnica tomada.",
+      },
+      {
+        title: "Aprende con IA",
+        text: "Usa inteligencia artificial como compañera de aprendizaje para entender patrones, arquitecturas y buenas prácticas aplicadas en proyectos reales.",
+      },
+      {
+        title: "Construye e innova",
+        text: "Aplica lo aprendido en tus propios proyectos. Contribuye, forkea y crea soluciones que generen impacto en tu comunidad.",
+      },
+    ]}
+  />
+
+  <GalleryText
+    title="Diseñado para estudiantes y desarrolladores que quieren aprender haciendo"
+    text="Código documentado, recursos educativos y proyectos reales pensados para que puedas avanzar a tu ritmo sin sacrificar profundidad técnica."
+    cta={{
+      title: "Ver Proyectos",
+      url: "#",
+    }}
+    images={[
+      {
+        alt: "Dashboard overview",
+        src: "/image-1.png",
+        width: 6000,
+        height: 4000,
+      },
+      {
+        alt: "Project collaboration view",
+        src: "/image-2.png",
+        width: 2689,
+        height: 4032,
+      },
+      {
+        alt: "Analytics and reporting",
+        src: "/image-3.png",
+        width: 3734,
+        height: 5359,
+      },
+    ]}
+    marqueeTexts={[
+      "Open Source",
+      "Educación con IA",
+      "Proyectos Reales",
+      "Acceso Libre",
+    ]}
+  />
+
+  <Statements
+    items={[
+      {
+        title: "Para estudiantes y equipos",
+        text: "Cada recurso está diseñado para reducir la curva de aprendizaje y maximizar el impacto de lo que construyes.",
+      },
+      {
+        title: "Crece con cada proyecto",
+        text: "Ya seas principiante o desarrollador experimentado, cada herramienta te da un nuevo punto de vista sobre cómo construir software.",
+      },
+      {
+        title: "Motívate a construir",
+        text: "Menos teoría vacía, más proyectos concretos para que puedas crear soluciones que transformen tu entorno.",
+      },
+    ]}
+  />
+
+  </section>
+
+  <TextMarquee
+    class="marquee"
+    texts={[
+      "Open Source",
+      "Educación con IA",
+      "Proyectos Reales",
+      "Acceso Libre",
+    ]}
+  />
+
+  <Projects
+    title="Nuestros Proyectos"
+    subtitle="Herramientas open source desarrolladas por CoreTekSoft, documentadas para que aprendas cómo se construyen soluciones reales."
+    items={[
+      {
+        title: "AstroTek",
+        description: "Una iniciativa OpenSource que se convierte en una plataforma interactiva diseñada para entusiastas del espacio y la astronomía. Nuestra misión es hacer que la información sea accesible y emocionante para todos.",
+        previewUrl: "https://astrotek.coreteksoft.com/",
+        repoUrl: "https://github.com/coreteksoft",
+        tag: "Open Source",
+        featured: true,
+      },
+    ]}
+  />
+
+  
+
+  <section id="Preguntas">
+  <Faqs
+    title="Preguntas Frecuentes"
+    mobileTitle="FAQs"
+    subtitle="Respuestas rápidas a las preguntas más comunes sobre CoreTekSoft Labs."
+    items={[
+      {
+        question: "¿Qué es CoreTekSoft Labs?",
+        answer:
+          "Es la iniciativa open source y educativa de CoreTekSoft (CTS), una startup vallecaucana. Publicamos nuestros proyectos universitarios con documentación para que estudiantes y desarrolladores aprendan cómo se construyen soluciones reales.",
+      },
+      {
+        question: "¿Necesito experiencia previa para aprender aquí?",
+        answer:
+          "No. Los proyectos están documentados para diferentes niveles. Puedes empezar desde cero y avanzar a tu propio ritmo con el apoyo de inteligencia artificial.",
+      },
+      {
+        question: "¿Los proyectos realmente son gratuitos?",
+        answer:
+          "Sí. Todo el código y la documentación son de acceso libre. Creemos que el conocimiento debe ser accesible para todos.",
+      },
+      {
+        question: "¿Puedo contribuir a los proyectos?",
+        answer:
+          "¡Por supuesto! Fomentamos las contribuciones de la comunidad. Puedes hacer fork, utilizar de base para tu idea, modifical... lo que quieras en base a nuestros proyectos.",
+      },
+      {
+        question: "¿Cómo se relaciona la IA con los proyectos?",
+        answer:
+          "La inteligencia artificial es parte fundamental de nuestro proceso. La usamos como copiloto de desarrollo y la enseñamos como herramienta para aprender más rápido y construir soluciones paso a paso sin tenerle temor.",
+      },
+    ]}
+  />
+
+  </section>
+
+  <GL />
+  <GLPlaces />
+</Layout>
+
+<style>
+  .marquee {
+    padding: 2rem 0;
+    z-index: 9;
+  }
+</style>
