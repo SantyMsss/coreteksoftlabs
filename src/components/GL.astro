@@ -549,6 +549,19 @@ void main() {
   const circle = new THREE.Mesh(geometry, material);
   ballGroup.add(circle);
 
+  // ---- Logo sobre la esfera ----
+  const logoTexture = new THREE.TextureLoader().load("/CoreTekSoftredondo.png");
+  logoTexture.colorSpace = THREE.SRGBColorSpace;
+  const logoGeo = new THREE.PlaneGeometry(1.1, 1.1);
+  const logoMat = new THREE.MeshBasicMaterial({
+    map: logoTexture,
+    transparent: true,
+    depthWrite: false,
+  });
+  const logoMesh = new THREE.Mesh(logoGeo, logoMat);
+  logoMesh.position.set(0, 0, 0.08);
+  ballGroup.add(logoMesh);
+
   const mouse = new THREE.Vector2();
   const toggled = new Set();
 
